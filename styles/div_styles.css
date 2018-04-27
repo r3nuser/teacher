@@ -1,0 +1,8 @@
+#top-nav{
+    background-color: black;
+    color: white;
+}
+#left-nav{
+    background-color: rgb(30,30,30);
+    position: absolute;
+}
