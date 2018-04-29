@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
 	<script src="scripts/tab_manager.js" type="text/javascript"></script>
-	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 </head>
 <body>
 	<div id="top-nav" class="">
@@ -19,6 +19,7 @@
 			<td><span class="top-nav-menu">Visualizar</span></td>
 		</tr>
 	</div>
+	
 	<div id="left-nav" class="">
 		<ul class="menu-list">
 			<li id="user-infos"><img src="images/menu_user.png" class="user-img"> USER: admin</li>
@@ -26,8 +27,6 @@
 			<li class="tablinks" onclick="openTab(event, 'professores', this)"><span class="left-nav-menu"><img src="images/menu_teacher.png" class="left-nav-img"> Professores</span></li>
 			<li class="tablinks" onclick="openTab(event, 'cursos', this)"><span class="left-nav-menu"><img src="images/menu_course.png" class="left-nav-img"> Cursos</span></li>
 			<li class="tablinks" onclick="openTab(event, 'instituicoes', this)"> <span class="left-nav-menu"><img src="images/menu_institution.png" class="left-nav-img"> Instituições</span></li>
-			
-
 		</ul>
 	</div>
 	<div id="content" class="">
@@ -37,15 +36,33 @@
 		<div id="professores" class="tabcontent">
 			<table class="menu-into">
 				<tr>
-					<td><span class="menu-into-option"> Professores </span></td>
-					<td><span class="menu-into-option"> Cadastrar Professor </span></td>
-					<td><span class="menu-into-option"> Alterar Dados </span></td>
-					<div id="teacher-central-content"></div>
+					<td><span class="menu-into-option" id="a-prof"> Professores </span></td>
+					<td><span class="menu-into-option" id="b-prof" href="forms/teacher_signup.html"> Cadastrar Professor </span></td>
+					<td><span class="menu-into-option" id="c-prof"> Alterar Dados </pan></td>			
 				</tr>
 			</table>
 		</div>
 		<div id="cursos" class="tabcontent">cursos</div>
 		<div id="instituicoes" class="tabcontent">instituicoes</div>
 	</div>
+
+	<div id="teacher-central-content">a</div>
+
+	<script>
+		$(document).ready(function(){
+			$("#professores span").click(function( e ){
+				var i,
+					itens;
+				itens = document.getElementsByClassName("menu-into-option");
+				for(i = 0; i < itens.length; i++){
+					itens[i].style.borderBottom = " 6px solid white";
+				}
+				e.currentTarget.style.borderBottom = "6px solid rgb(220,220,220)";
+				e.preventDefault();
+				var href = $(this).attr('href');
+				$("#teacher-central-content").load(href+" #teacher-central-content");
+			});
+		});
+	</script>
 </body>
 </html>

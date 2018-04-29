@@ -9,8 +9,19 @@
     float:left;
     padding-bottom: 1000em;
 	margin-bottom: -999.5em; 
+    margin-right: 10px;
 }
 #content{
 	position: relative;
-	margin: 10px;
+	margin-top: 5px;
+    margin-left: 200px;
+}
+#center{
+    margin: 0px;
+    padding: 0px;
+
+}
+#teacher-central-content{
+    margin: 10px;
+   
 }
