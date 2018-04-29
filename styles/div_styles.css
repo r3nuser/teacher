@@ -3,6 +3,14 @@
     color: white;
 }
 #left-nav{
-    background-color: rgb(30,30,30);
-    position: absolute;
+    background-color: rgb(40,40,40);
+    position: relative;
+    width: 200px;
+    float:left;
+    padding-bottom: 1000em;
+	margin-bottom: -999.5em; 
+}
+#content{
+	position: relative;
+	margin: 10px;
 }

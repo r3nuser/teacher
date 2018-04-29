@@ -6,23 +6,46 @@
 	<link href="styles/menu.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
+	<script src="scripts/tab_manager.js" type="text/javascript"></script>
+	
 </head>
 <body>
 	<div id="top-nav" class="">
 		<tr>
 			<td><span class="top-nav-name"><span class="red">T</span>eacher</span></td>
-			<td><span class="top-nav-menu">a</span></td>
-			<td><span class="top-nav-menu">a</span></td>
-			<td><span class="top-nav-menu">a</span></td>
-			<td><span class="top-nav-menu">a</span></td>
+			<td><span class="top-nav-menu">Cadastrar</span></td>
+			<td><span class="top-nav-menu">Editar</span></td>
+			<td><span class="top-nav-menu">Deletar</span></td>
+			<td><span class="top-nav-menu">Visualizar</span></td>
 		</tr>
 	</div>
 	<div id="left-nav" class="">
 		<ul class="menu-list">
-			<li><span class="left-nav-menu">Professores</span></li>
-			<li><span class="left-nav-menu">Cursos</span></li>
-			<li><span class="left-nav-menu">Instituições</span></li>
-	</li>
+			<li id="user-infos"><img src="images/menu_user.png" class="user-img"> USER: admin</li>
+			<li class="tablinks" onclick="openTab(event, 'inicio', this)"><span class="left-nav-menu"><img src="images/menu_house.png" class="left-nav-img"> Dashboard</span></li>
+			<li class="tablinks" onclick="openTab(event, 'professores', this)"><span class="left-nav-menu"><img src="images/menu_teacher.png" class="left-nav-img"> Professores</span></li>
+			<li class="tablinks" onclick="openTab(event, 'cursos', this)"><span class="left-nav-menu"><img src="images/menu_course.png" class="left-nav-img"> Cursos</span></li>
+			<li class="tablinks" onclick="openTab(event, 'instituicoes', this)"> <span class="left-nav-menu"><img src="images/menu_institution.png" class="left-nav-img"> Instituições</span></li>
+			
+
+		</ul>
+	</div>
+	<div id="content" class="">
+		<div id="inicio" class="tabcontent">inicio
+			
+		</div>
+		<div id="professores" class="tabcontent">
+			<table class="menu-into">
+				<tr>
+					<td><span class="menu-into-option"> Professores </span></td>
+					<td><span class="menu-into-option"> Cadastrar Professor </span></td>
+					<td><span class="menu-into-option"> Alterar Dados </span></td>
+					<div id="teacher-central-content"></div>
+				</tr>
+			</table>
+		</div>
+		<div id="cursos" class="tabcontent">cursos</div>
+		<div id="instituicoes" class="tabcontent">instituicoes</div>
 	</div>
 </body>
 </html>
