@@ -1,6 +1,6 @@
 body{
 	background-color: white;
-	background-image: url("https://www.splitshire.com/wp-content/uploads/2014/11/SplitShire-03692-1800x1200.jpg");
+	
 	background-size: cover;
     margin: 0px;
     font-family: 'Exo', sans-serif;
@@ -9,7 +9,7 @@ body{
 .menu-into{
 	border-bottom: 1px solid rgb(120,120,120);
 	margin: 0 auto;
-	width: 600px;
+	width: 100%;
 	background-color: white;
 }
 .menu-into-option{
@@ -25,12 +25,14 @@ body{
 .menu-into-option:hover{
 	border-bottom: 6px solid rgb(220,220,220);
 	color: orangered;
-};
+}
 form{
 	padding: 10px;
 }
 label{
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
+.cc-first{
+ border: 1px gray solid;   
+}
