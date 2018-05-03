@@ -13,8 +13,10 @@
 }
 #content{
 	position: relative;
-	margin-top: 5px;
-    margin-left: 200px;
+	margin-top: 10px;
+    margin-left: 210px;
+    margin-right: 10px;
+    background-color: white;
 }
 #center{
     margin: 0px;
@@ -22,6 +24,8 @@
 
 }
 #teacher-central-content{
-    margin: 10px;
-   
+    margin: 0 auto;
+    width: 600px;
+    padding: 10px;
+
 }

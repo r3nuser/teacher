@@ -36,24 +36,33 @@
 		<div id="professores" class="tabcontent">
 			<table class="menu-into">
 				<tr>
-					<td><span class="menu-into-option" id="a-prof"> Professores </span></td>
-					<td><span class="menu-into-option" id="b-prof" href="forms/teacher_signup.html"> Cadastrar Professor </span></td>
-					<td><span class="menu-into-option" id="c-prof"> Alterar Dados </pan></td>			
+					<td><span class="btn-teacher menu-into-option"> Professores </span></td>
+					<td><span class="btn-teacher menu-into-option" href="forms/teacher_signup.html"> Cadastrar Professor </span></td>
+					<td><span class="btn-teacher menu-into-option"> Alterar Dados </pan></td>			
 				</tr>
 			</table>
+			<div id="teacher-central-content"></div>
 		</div>
-		<div id="cursos" class="tabcontent">cursos</div>
-		<div id="instituicoes" class="tabcontent">instituicoes</div>
+
+		<div id="cursos" class="tabcontent">
+			<table class="menu-into">
+				
+			</table>
+		</div>
+
+		<div id="instituicoes" class="tabcontent">
+
+		</div>
 	</div>
 
-	<div id="teacher-central-content">a</div>
+	
 
 	<script>
 		$(document).ready(function(){
 			$("#professores span").click(function( e ){
 				var i,
 					itens;
-				itens = document.getElementsByClassName("menu-into-option");
+				itens = document.getElementsByClassName("btn-teacher");
 				for(i = 0; i < itens.length; i++){
 					itens[i].style.borderBottom = " 6px solid white";
 				}
