@@ -13,10 +13,10 @@
 	<div id="top-nav" class="">
 		<tr>
 			<td><span class="top-nav-name"><span class="red">T</span>eacher</span></td>
-			<td><span class="top-nav-menu">Cadastrar</span></td>
-			<td><span class="top-nav-menu">Editar</span></td>
-			<td><span class="top-nav-menu">Deletar</span></td>
-			<td><span class="top-nav-menu">Visualizar</span></td>
+			<td><span class="top-nav-menu">a</span></td>
+			<td><span class="top-nav-menu">b</span></td>
+			<td><span class="top-nav-menu">c</span></td>
+			<td><span class="top-nav-menu">d</span></td>
 		</tr>
 	</div>
 	
@@ -36,7 +36,7 @@
 		<div id="professores" class="tabcontent">
 			<table class="menu-into">
 				<tr>
-					<td><span class="btn-teacher menu-into-option"> Professores </span></td>
+					<td><span class="btn-teacher menu-into-option" href="panels/teacher_panel.html"> Professores </span></td>
 					<td><span class="btn-teacher menu-into-option" href="forms/teacher_signup.html"> Cadastrar Professor </span></td>
 					<td><span class="btn-teacher menu-into-option"> Alterar Dados do Professor </span></td>			
 				</tr>
@@ -47,7 +47,7 @@
 		<div id="cursos" class="tabcontent">
 			<table class="menu-into">
 				<tr>
-					<td><span class="btn-course menu-into-option"> Cursos </span></td>
+					<td><span class="btn-course menu-into-option" href="panels/course_panel.html"> Cursos </span></td>
 					<td><span class="btn-course menu-into-option" href="forms/course_signup.html"> Cadastrar Curso </span></td>
 					<td><span class="btn-course menu-into-option"> Alterar Dados do Curso </span></td>			
 				</tr>
@@ -58,11 +58,12 @@
 		<div id="instituicoes" class="tabcontent">
 			<table class="menu-into">
 				<tr>
-					<td><span class="btn-institution menu-into-option"> Instituições </span></td>
+					<td><span class="btn-institution menu-into-option" href="panels/institution_panel.html"> Instituições </span></td>
 					<td><span class="btn-institution menu-into-option" href="forms/institution_signup.html"> Cadastrar Instituições </span></td>
 					<td><span class="btn-institution menu-into-option"> Alterar Dados da Instituição </span></td>	
 				</tr>
 			</table>
+			<div id="institution-central-content" class="cc-first"></div>
 		</div>
 	</div>
 
@@ -81,6 +82,30 @@
 				e.preventDefault();
 				var href = $(this).attr('href');
 				$("#teacher-central-content").load(href+" #teacher-central-content");
+			});
+			$("#cursos span").click(function(e){
+				var i,
+					itens;
+				itens = document.getElementsByClassName("btn-course");
+				for(i = 0; i < itens.length; i++){
+					itens[i].style.borderBottom = "6px solid white";
+				}
+				e.currentTarget.style.borderBottom = "6px solid rgb(220,220,220)";
+				e.preventDefault();
+				var href = $(this).attr('href');
+				$("#course-central-content").load(href+" #course-central-content")
+			});
+			$("#instituicoes span").click(function(e){
+				var i,
+					itens;
+				itens = document.getElementsByClassName("btn-institution");
+				for(i =0; i < itens.lenght; i++){
+					itens[i].style.borderBottom = "6px solid white";
+				}
+				e.currentTarget.style.borderBottom = "6px solid rgb(220,220,220)";
+				e.preventDefault();
+				var href = $(this).attr('href');
+				$("#institution-central-content").load(href+" #institution-central-content");
 			});
 		});
 	</script>

@@ -24,7 +24,7 @@ body{
 }
 .menu-into-option:hover{
 	border-bottom: 6px solid rgb(220,220,220);
-	color: orangered;
+	color: #1111FF;
 }
 form{
 	padding: 10px;
@@ -35,4 +35,16 @@ label{
 }
 .cc-first{
  border: 1px gray solid;   
+}
+.table-light{
+	background-color: rgb(240,240,255);
+}
+.cads{
+	margin: 0;
+}
+.cad-data{
+	margin: 10px;
+}
+thead{
+	background-color: rgb(245,245,245);
 }

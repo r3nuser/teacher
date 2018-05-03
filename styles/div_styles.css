@@ -17,11 +17,11 @@
     margin-left: 210px;
     margin-right: 10px;
     background-color: white;
+    overflow-y: auto;
 }
 #center{
     margin: 0px;
     padding: 0px;
-
 }
 
 #teacher-central-content{

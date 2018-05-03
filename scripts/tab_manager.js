@@ -2,8 +2,7 @@ function openTab(evt, tabName, element){
 	var i,
 		tabcontent,
 		tablinks;
-
-	document.getElementById("teacher-central-content").innerHTML="";
+	
 	tabcontent = document.getElementsByClassName("tabcontent");
 
 	for(i = 0; i < tabcontent.length; i++){
