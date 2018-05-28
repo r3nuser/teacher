@@ -4,15 +4,15 @@
 	</head>
 	<body>
 		<div id="course-central-content">
-			<form>
+			<form action="../php/curso/cadastrar/cadastrar.php" method="get">
 				<h3>Cadastro de Curso</h3>
 				<hr>
 				<br>
-				<label>Nome do curso: <input name="nome" type="text"></label>
+				<label>Nome do curso: <input name="nome" type="text"required></label>
 				<br><br>
-				<label>Carga Horária: <input name="ch" type="text"></label>
+				<label>Carga Horária: <input name="ch" type="text"required></label>
 				<br><br>
-				<button type="submit">Cadastrar !</button>
+				<input type="submit" value="Cadastrar!"/>
 			</form>
 		</div>
 	</body>
