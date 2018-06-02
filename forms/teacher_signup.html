@@ -2,33 +2,28 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../styles/default.css" type="text/css">
+		<script src="../scripts/formatterFields.js"></script>
+		<script src="../scripts/checkEmail.js"></script>
 	</head>
 	<body>
 		<div id="teacher-central-content" margin="10px">
-			<form>
+			<form action="../teacher/php/professor/cadastrar.php" method="get">
 				<h3>Cadastro de Professor</h3>
 				<hr>
 				<br>
-				<label>Nome: <input name="nome" type="text"></label>
+				<label>Nome:</label><br>
+				<input name="nome" type="text" required/>
 				<br>
-				<label>Sexo: <input type="radio" name="genero" value="m" checked>Masculino</label>
-				<label><input type="radio" name="genero" value="f">Feminino</label><br>
 				<h4>Contato</h4>
 				<hr>
-				<label>Email: <input name="email" type="text"></label><br><br>
-				<label>Telefone 1: <input name="telefone1" type="text"></label>
-				<label>Telefone 2: <input name="telefone2" type="text"></label><br>
-				<h4>Pode ministrar os cursos</h4>
-				<hr>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
-				<label><input type="checkbox"> Exemplo</label></br>
+				<label>Email:</label><br>
+				<input name="email" type="text" id="ei" onblur="return IsEmail(this.value)" required/>
 				<br>
-				<button type="submit">Cadastrar !</button>
+				<label>Telefone:</label><br>
+				<input name="telefone" type="text" maxlength="14" onkeydown="javascript: fMasc( this, mTel );" required/>
+				<br>
+				<br>
+				<input type="submit" value="Cadastrar !">
 			</form>
 		</div>
 	</body>

@@ -1,5 +1,5 @@
 <?php
-    include("../../connection/conn.php");
+    include("../connection/conn.php");
     $con = openConnection();
     
     $nome = $_GET['nome'];
@@ -11,5 +11,6 @@
         echo "Descrição do erro: " .mysqli_error($con);
     }else{
         echo("<script>alert('Cadastro realizado com sucesso!')</script>");
+        echo("<script>history.back(1)</script>");
     }
 ?>
