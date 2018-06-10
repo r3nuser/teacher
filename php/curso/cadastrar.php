@@ -11,6 +11,6 @@
         echo "Descrição do erro: " .mysqli_error($con);
     }else{
         echo("<script>alert('Cadastro realizado com sucesso!')</script>");
-        echo("<script>history.back(1)</script>");
+        echo("<script>location.href= '../../iframes/curso.php#item1'</script>");
     }
 ?>

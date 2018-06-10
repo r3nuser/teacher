@@ -1,3 +1,10 @@
+a{
+    text-decoration: none;
+    color: rgb(200,200,200);
+}
+a.hover{
+    background-color: #1111FF;
+}
 .top-nav-name{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -13,7 +20,8 @@
     float:right;
 }
 .top-nav-menu:hover{
-    background-color: rgb(210, 61, 12);
+    background-color: #1111FF;
+/*     background-color: rgb(210, 61, 12); */
     color: rgb(220,220,220);
 }
 .user-img{

@@ -14,6 +14,6 @@
     }else{
         echo("<script>alert('Cadastro realizado com sucesso!')</script>");
         closeConnection($con);
-        echo("<script>history.back(1)</script>");
+        echo("<script>location.href= '../../iframes/professores.php#item1'</script>");
     }
 ?>

@@ -1,0 +1,64 @@
+button{
+    background-color: #ffffff;
+    border:none;
+    cursor:pointer;
+}
+body{
+    margin: 0;
+    /* background-color:#808080; */
+}
+.link{
+    /*remove a decoração do elemento a*/
+    text-decoration: none;
+}
+
+.navbar {
+   
+    /**** Barra de menu ****
+        posição fixa no topo da pagina,
+        com o comprimento de 100% e margem no fundo de 1% 
+    */
+    overflow: hidden;
+    background-color: rgb(7, 2, 5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 1%;
+}
+  
+.navbar a {
+    
+    /* elementos "a" (links) */
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;  
+}
+  
+.navbar a:hover {
+      /* Quando o mouse estiver pos cima do elemento  */
+    background: rgb(255,140,0);
+    color: black;
+}
+  
+.main {
+   /* usado no menu */
+    padding-top: 15px;
+    margin-top: 30px;
+    
+   /* Used in this example to enable scrolling */
+}
+
+/* toda a div da classe "main" está com o display em "none"
+a menos que eu clique em algum dos links no menu, isso atribui o display block ao item*/
+
+div.main div {
+    display: none
+}
+
+div.main div:target {
+    display: block
+}

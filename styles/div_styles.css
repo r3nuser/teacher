@@ -1,3 +1,6 @@
+body{
+    height: 450px;
+}
 #top-nav{
     background-color: black;
     color: white;
@@ -7,7 +10,7 @@
     position: relative;
     width: 200px;
     float:left;
-    padding-bottom: 1000em;
+    padding-bottom: 500000px;
 	margin-bottom: -999.5em; 
     margin-right: 10px;
 }
@@ -17,7 +20,7 @@
     margin-left: 210px;
     margin-right: 10px;
     background-color: white;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 #center{
     margin: 0px;

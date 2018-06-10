@@ -2,6 +2,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Teacher Control</title>
+	<link rel="stylesheet" href="styles/iframe.css">
+
 	<link href="styles/default.css" rel="stylesheet" type="text/css">
 	<!-- ============================================================ -->
 	<link href="styles/div_styles.css" rel="stylesheet" type="text/css">
@@ -14,30 +16,47 @@
 	<!-- ============================================================== -->
 	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
 	<!-- ============================================================= -->
+	<!-- <link rel="stylesheet" href="iframes/css/MenuBar.css"> -->
+
 	<script type="text/javascript" src="scripts/CEP.js"></script>
 	<script src="scripts/formatterFields.js"></script>
 	<script src="scripts/checkEmail.js"></script>
 	<script src="scripts/tab_manager.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+	<script src="scripts/submit.js"></script>
+	<style>
+		.text{
+			border:none;
+		}
+		
+		 
+	</style>
 </head>
 <body>
 	<div id="top-nav" class="">
 		<tr>
 			<td><span class="top-nav-name"><span class="red">T</span><span>eacher</span> <span class="red">C</span><span>ontrol</span></td>
-			<td><span class="top-nav-menu">a</span></td>
-			<td><span class="top-nav-menu">b</span></td>
-			<td><span class="top-nav-menu">c</span></td>
-			<td><span class="top-nav-menu">d</span></td>
+			
+			<td><span class="top-nav-menu"><a target="instituicao" onclick="openTab(event, 'instituicoes', this);setTopo();" href="iframes/instituicao.php#item1">Listar Instituição</a></span></td>
+			<td><span class="top-nav-menu"><a target="instituicao" onclick="openTab(event, 'instituicoes', this);setTopo();" href="iframes/instituicao.php#item2">Cadastrar Instituição</a></span></td>
+			
+			<td><span class="top-nav-menu"><a target="curso" onclick="openTab(event, 'cursos', this);setTopo();" href="iframes/curso.php#item1">Listar Curso</a></span></td>
+			<td><span class="top-nav-menu"><a target="curso" onclick="openTab(event, 'cursos', this)" href="iframes/curso.php#item2">Cadastrar Curso</a></span></td>
+			
+			<td><span class="top-nav-menu"><a target="professor" onclick="openTab(event, 'professores', this);setTopo();" href="iframes/professores.php#item1">Listar Professores</a></span></td>
+			<td><span class="top-nav-menu"><a target="professor" onclick="openTab(event, 'professores', this);setTopo();" href="iframes/professores.php#item2">Cadastrar Professores</a></span></td>
 		</tr>
 	</div>
-	
+	<!-- <a target="professor" onclick="setTopo();" href="iframes/professores.php#item1"> Professores</a> -->
+	<!-- <a target="professor" onclick="setTopo();" href="iframes/curso.php#item1"> Cursos</a> -->
+	<!-- <a target="professor" onclick="setTopo();" href="iframes/instituicao.php#item1"> Instituições</a> -->
 	<div id="left-nav" class="">
 		<ul class="menu-list">
 			<li id="user-infos"><img src="images/menu_user.png" class="user-img"> USER: admin</li>
 			<li class="tablinks" onclick="openTab(event, 'inicio', this)"><span class="left-nav-menu"><img src="images/menu_house.png" class="left-nav-img"> Dashboard</span></li>
-			<li class="tablinks" onclick="openTab(event, 'professores', this)"><span class="left-nav-menu"><img src="images/menu_teacher.png" class="left-nav-img"> Professores</span></li>
-			<li class="tablinks" onclick="openTab(event, 'cursos', this)"><span class="left-nav-menu"><img src="images/menu_course.png" class="left-nav-img"> Cursos</span></li>
-			<li class="tablinks" onclick="openTab(event, 'instituicoes', this)"> <span class="left-nav-menu"><img src="images/menu_institution.png" class="left-nav-img"> Instituições</span></li>
+			<li class="tablinks" onclick="openTab(event, 'professores', this)"><span class="left-nav-menu"><img src="images/menu_teacher.png" class="left-nav-img"> <a target="professor" onclick="setTopo();" href="iframes/professores.php#item1"> Professores</a></span></li>
+			<li class="tablinks" onclick="openTab(event, 'cursos', this)"><span class="left-nav-menu"><img src="images/menu_course.png" class="left-nav-img"> <a target="curso" onclick="setTopo();" href="iframes/curso.php#item1"> Cursos</a></span></li>
+			<li class="tablinks"  onclick="openTab(event, 'instituicoes', this)"> <span class="left-nav-menu"><img src="images/menu_institution.png" class="left-nav-img"> <a target="instituicao" onclick="setTopo();" href="iframes/instituicao.php#item1"> Instituições</a></span></li>
 		</ul>
 	</div>
 	<div id="content" class="">
@@ -45,36 +64,21 @@
 			
 		</div>
 		<div id="professores" class="tabcontent">
-			<table class="menu-into">
-				<tr>
-					<td><span class="btn-teacher menu-into-option" href="panels/teacher_panel.html"> Professores </span></td>
-					<td><span class="btn-teacher menu-into-option" href="forms/teacher_signup.html"> Cadastrar Professor </span></td>
-					<td><span class="btn-teacher menu-into-option"> Alterar Dados do Professor </span></td>			
-				</tr>
-			</table>
-			<div id="teacher-central-content" class="cc-first"></div>
+			<iframe name="professor" class="menu-into" src="iframes/professores.php" frameborder="0"></iframe>
+			
+			<!-- <div id="teacher-central-content" class="cc-first"></div> -->
 		</div>
 
 		<div id="cursos" class="tabcontent">
-			<table class="menu-into">
-				<tr>
-					<td><span class="btn-course menu-into-option" href="panels/course_panel.html"> Cursos </span></td>
-					<td><span class="btn-course menu-into-option" href="forms/course_signup.html"> Cadastrar Curso </span></td>
-					<td><span class="btn-course menu-into-option"> Alterar Dados do Curso </span></td>			
-				</tr>
-			</table>
-			<div id="course-central-content" class="cc-first"></div>
+				<iframe name="curso" class="menu-into" src="iframes/curso.php" frameborder="0"></iframe>
+			
+			<!-- <div id="course-central-content" class="cc-first"></div> -->
 		</div>
 
 		<div id="instituicoes" class="tabcontent">
-			<table class="menu-into">
-				<tr>
-					<td><span class="btn-institution menu-into-option" href="panels/institution_panel.html"> Instituições </span></td>
-					<td><span class="btn-institution menu-into-option" href="forms/institution_signup.html"> Cadastrar Instituições </span></td>
-					<td><span class="btn-institution menu-into-option"> Alterar Dados da Instituição </span></td>	
-				</tr>
-			</table>
-			<div id="institution-central-content" class="cc-first"></div>
+			<iframe class="menu-into" src="iframes/instituicao.php" name="instituicao" frameborder="0"></iframe>
+			
+			<!-- <div id="institution-central-content" class="cc-first"></div> -->
 		</div>
 	</div>
 
@@ -119,6 +123,12 @@
 				$("#institution-central-content").load(href+" #institution-central-content");
 			});
 		});
+
+		
+		function setTopo(){
+    		$(window).scrollTop(0);
+		}
+		$(window).bind('scroll', setTopo);
 	</script>
 </body>
 </html>
